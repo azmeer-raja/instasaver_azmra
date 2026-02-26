@@ -36,7 +36,7 @@ export default function DMCAPage() {
 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Counter-Notice</h2>
                 <p className="mb-4">
-                    If you believe that your material that was reported is not infringing, or that you have authorization from the copyright owner, the copyright owner's agent, or pursuant to the law, to post and use the material, you may send a counter-notice containing your identification, contact information, good faith statement, and consent to jurisdiction.
+                    If you believe that your material that was reported is not infringing, or that you have authorization from the copyright owner, the copyright owner&apos;s agent, or pursuant to the law, to post and use the material, you may send a counter-notice containing your identification, contact information, good faith statement, and consent to jurisdiction.
                 </p>
 
                 <p className="mt-8 text-sm text-muted-foreground">

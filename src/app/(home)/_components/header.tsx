@@ -29,9 +29,6 @@ export function Header() {
 
   const t = useTranslations("layouts.home.header");
 
-  const scrollUp = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   React.useEffect(() => {
     if (!isMobile && open) {

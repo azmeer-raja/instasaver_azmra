@@ -14,7 +14,7 @@ export default function PrivacyPage() {
 
             <div className="prose prose-gray dark:prose-invert max-w-none">
                 <p className="lead text-xl text-muted-foreground mb-8">
-                    This Privacy Policy explains how Insta Saver ("we", "us", or "our") collects, uses, and protects your information when you use our website and services.
+                    This Privacy Policy explains how Insta Saver (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and protects your information when you use our website and services.
                 </p>
 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">1. Information We Collect</h2>
