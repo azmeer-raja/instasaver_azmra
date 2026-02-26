@@ -120,7 +120,7 @@
   html {
     @apply bg-background;
     /* NOTE: Do NOT add overflow-x:hidden here — it breaks position:fixed
-       elements (e.g. Monetag push dialog) by changing their containing block
+       elements by changing their containing block
        from the viewport to the html element. */
   }
 
@@ -130,7 +130,7 @@
     overflow-x: hidden;
   }
 
-  /* Prevent 3rd-party ad scripts (Monetag, AdSense) from injecting
+  /* Prevent 3rd-party ad scripts (AdSense) from injecting
      elements that overflow the viewport horizontally */
   iframe,
   .adsbygoogle,

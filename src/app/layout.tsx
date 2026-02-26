@@ -9,8 +9,6 @@ import { cn } from "@/lib/utils";
 import { siteMetadata } from "@/lib/site";
 import { getLocale, getMessages } from "next-intl/server";
 
-import { AdManager } from "@/components/ad-manager";
-
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
@@ -44,7 +42,6 @@ export default async function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-1213830257600237" />
       </head>
       <body className={cn("antialiased", geistSans.className)}>
-        <AdManager />
 
         <LocaleProvider locale={locale} messages={messages}>
           <ThemeProvider>
