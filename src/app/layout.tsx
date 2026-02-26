@@ -37,12 +37,11 @@ export default async function RootLayout({
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Google AdSense - ALWAYS loads (Required for ad units to render on subsequent navigations) */}
-        <Script
+        <script
           async
-          strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1213830257600237"
           crossOrigin="anonymous"
-        />
+        ></script>
         <meta name="google-adsense-account" content="ca-pub-1213830257600237" />
       </head>
       <body className={cn("antialiased", geistSans.className)}>
