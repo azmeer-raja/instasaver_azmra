@@ -119,12 +119,23 @@
 
   html {
     @apply bg-background;
+    overflow-x: hidden;
   }
 
   body {
     @apply text-foreground bg-transparent;
+    overflow-x: hidden;
+  }
+
+  /* Prevent 3rd-party ad scripts (Monetag, AdSense) from injecting
+     elements that overflow the viewport horizontally */
+  iframe,
+  .adsbygoogle,
+  ins.adsbygoogle {
+    max-width: 100% !important;
   }
 }
+
 
 @layer components {
   .thumbnail-card {
