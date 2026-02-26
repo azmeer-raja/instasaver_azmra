@@ -119,12 +119,12 @@ export class ParticleBackground {
                 new Particle({
                     x: Math.random() * this.canvas.width,
                     y: Math.random() * this.canvas.height,
-                    radius: Math.random() * 1.5 + 1.5, // 3-6px diameter
+                    radius: Math.random() * 1.5 + 1, // 2-5px diameter
                     color: this.COLORS[Math.floor(Math.random() * this.COLORS.length)],
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    friction: 0.95,
-                    alpha: Math.random() * 0.4 + 0.5, // Stronger alpha (0.5 to 0.9)
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
+                    friction: 0.96,
+                    alpha: Math.random() * 0.15 + 0.15, // Subtle alpha (0.15 to 0.3)
                 })
             );
         }
