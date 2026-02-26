@@ -8,10 +8,14 @@ web development techniques, including server-side rendering/components, API
 interaction (potentially via Next.js API routes), state management, form
 handling, and building a clean UI with Shadcn/ui.
 
-**Disclaimer:** This tool is intended for educational purposes only. Downloading
-videos from Instagram may violate their Terms of Service. Please respect
-copyright laws and the platform's policies. Use this tool responsibly and only
-for content you have the right to download.
+## ⚠️ Disclaimer
+
+This project is intended for **educational and personal use only**. 
+
+1. **No Affiliation:** Insta Saver is not affiliated with, endorsed by, or sponsored by Instagram, Meta Platforms, Inc., or Facebook.
+2. **User Responsibility:** Users are solely responsible for their use of this tool. Downloading copyrighted content without permission is illegal and violates Instagram's Terms of Service.
+3. **Accuracy:** We do not guarantee the availability or accuracy of the service. Changes to Instagram's platform may affect functionality without notice.
+4. **Fair Use:** Please respect content ownership and comply with all applicable laws and regulations.
 
 Website Preview: [instasaver-azmra.vercel.app](https://instasaver-azmra.vercel.app)
 
