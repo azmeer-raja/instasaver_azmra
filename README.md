@@ -85,11 +85,11 @@ Follow these steps to set up and run the project locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/riad-azz/instagram-video-downloader.git
+   git clone [https://github.com/riad-azz/instagram-video-downloader](https://github.com/azmeer-raja/instasaver_azmra.git)
    ```
 
    ```bash
-   cd instagram-video-downloader
+   cd instasaver_azmra
    ```
 
 2. **Install dependencies:**
