@@ -13,6 +13,7 @@ import { getLocale, getMessages } from "next-intl/server";
 
 import Script from "next/script";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geistSans = RootFont({
@@ -46,6 +47,7 @@ export default async function RootLayout({
               <div className="relative z-10">
                 {children}
                 <Toaster closeButton />
+                <SpeedInsights />
               </div>
             </ReactQueryProvider>
           </ThemeProvider>
