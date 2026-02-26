@@ -119,11 +119,14 @@
 
   html {
     @apply bg-background;
-    overflow-x: hidden;
+    /* NOTE: Do NOT add overflow-x:hidden here — it breaks position:fixed
+       elements (e.g. Monetag push dialog) by changing their containing block
+       from the viewport to the html element. */
   }
 
   body {
     @apply text-foreground bg-transparent;
+    /* Keep overflow-x only on body to clip injected ad elements */
     overflow-x: hidden;
   }
 
