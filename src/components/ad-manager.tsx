@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Script from "next/script";
 
-// Cool down period before showing ads again (e.g., 1 hour)
-const AD_COOLDOWN_MS = 60 * 60 * 1000;
+// Cool down period before showing ads again (e.g., 1 minute)
+const AD_COOLDOWN_MS = 60 * 1000;
 
 export function AdManager() {
     const [shouldLoadAds, setShouldLoadAds] = useState(false);
