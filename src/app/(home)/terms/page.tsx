@@ -14,7 +14,7 @@ export default function TermsPage() {
 
             <div className="prose prose-gray dark:prose-invert max-w-none">
                 <p className="lead text-xl text-muted-foreground mb-8">
-                    Welcome to Insta Saver. These Terms of Service ("Terms") govern your access to and use of our website and applications.
+                    Welcome to Insta Saver. These Terms of Service (&quot;Terms&quot;) govern your access to and use of our website and applications.
                 </p>
 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">1. Agreement to Terms</h2>
@@ -43,7 +43,7 @@ export default function TermsPage() {
 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">4. Disclaimers and Limitation of Liability</h2>
                 <p className="mb-4">
-                    Our Service is provided on an "AS IS" and "AS AVAILABLE" basis without any warranties, express or implied. Insta Saver does not warrant that the Service will be uninterrupted, error-free, or fully secure. We shall not be liable for any direct, indirect, incidental, or consequential damages resulting from your use of the Service.
+                    Our Service is provided on an &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; basis without any warranties, express or implied. Insta Saver does not warrant that the Service will be uninterrupted, error-free, or fully secure. We shall not be liable for any direct, indirect, incidental, or consequential damages resulting from your use of the Service.
                 </p>
 
                 <p className="mt-8 text-sm text-muted-foreground">

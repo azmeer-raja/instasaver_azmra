@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
                     By using Insta Saver, you acknowledge and agree that you are solely responsible for how you use our service and any content you download. We provide the tools, but you must use them responsibly and legally.
                 </p>
                 <p className="mb-4">
-                    You must respect content ownership, comply with Instagram's terms of service, and adhere to copyright and fair use guidelines. Insta Saver assumes no responsibility for any misuse of the content downloaded utilizing our services.
+                    You must respect content ownership, comply with Instagram&apos;s terms of service, and adhere to copyright and fair use guidelines. Insta Saver assumes no responsibility for any misuse of the content downloaded utilizing our services.
                 </p>
 
                 <h2 className="text-2xl font-semibold mt-8 mb-4">Service Limitations</h2>

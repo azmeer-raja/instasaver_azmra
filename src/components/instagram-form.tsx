@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import { toast } from "sonner";
 import { useForm } from "react-hook-form";
@@ -321,10 +323,12 @@ export function InstagramForm(props: { className?: string }) {
               {/* Media Preview Thumbnail */}
               {(metadata.thumbnail_src || metadata.display_url || metadata.thumbnail_url) && (
                 <div className="relative w-full aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden bg-black/5 dark:bg-white/5 group">
-                  <img
+                  <Image
                     src={`/api/image-proxy?url=${encodeURIComponent(metadata.thumbnail_src || metadata.display_url || metadata.thumbnail_url)}`}
                     alt="Thumbnail"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    unoptimized
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {metadata.is_video && (
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20">
@@ -390,10 +394,13 @@ export function InstagramForm(props: { className?: string }) {
               <div className="flex flex-col items-center justify-center md:items-start md:justify-start gap-4 bg-white/40 dark:bg-black/30 p-3 rounded-2xl w-full text-center md:text-left">
                 <div className="flex flex-col md:flex-row items-center gap-4">
                   {metadata.owner?.profile_pic_url ? (
-                    <img
+                    <Image
                       src={`/api/image-proxy?url=${encodeURIComponent(metadata.owner.profile_pic_url)}`}
                       alt={metadata.owner.username}
-                      className="w-12 h-12 rounded-full ring-2 ring-white dark:ring-black/50 object-cover"
+                      width={48}
+                      height={48}
+                      unoptimized
+                      className="rounded-full ring-2 ring-white dark:ring-black/50 object-cover"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-slate-200 dark:bg-slate-800" />
