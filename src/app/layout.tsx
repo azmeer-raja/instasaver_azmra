@@ -11,7 +11,6 @@ import { siteMetadata } from "@/lib/site";
 import { getLocale, getMessages } from "next-intl/server";
 
 import { AdManager } from "@/components/ad-manager";
-import Script from "next/script";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
