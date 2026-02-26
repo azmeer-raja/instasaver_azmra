@@ -40,6 +40,13 @@ export default async function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://quge5.com/88/tag.min.js"
+          data-zone="214518"
+          async
+          data-cfasync="false"
+          strategy="afterInteractive"
+        />
         <LocaleProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <ReactQueryProvider>
