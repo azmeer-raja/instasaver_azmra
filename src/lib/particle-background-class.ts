@@ -91,7 +91,7 @@ export class ParticleBackground {
     private boundMouseMove: (e: MouseEvent) => void;
 
     private readonly COLORS = ["#4b5563", "#374151", "#1f2937", "#60a5fa"]; // Darker grays and medium blue
-    private readonly PARTICLE_COUNT = 200; // Solid coverage
+    private readonly PARTICLE_COUNT = 80; // Balanced coverage with lower CPU cost
 
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
@@ -148,8 +148,7 @@ export class ParticleBackground {
     private resize() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        // Re-create particles on resize to ensure full coverage
-        this.createParticles();
+        // Only create particles once; just resize the canvas on subsequent calls
     }
 
     private animate = () => {

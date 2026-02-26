@@ -30,14 +30,17 @@ export function LogoImage({
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <div className={cn("relative w-6 h-6", className)} {...props}>
+    <div className={cn("relative flex items-center justify-center", className)} {...props}>
       <Image
-        src="/favicon.ico"
-        alt="Instagram Logo"
-        fill
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        src="/logo-42.png"
+        alt="Insta Saver Logo"
+        width={42}
+        height={42}
+        priority
         className="object-contain"
       />
     </div>
   );
 }
+
+

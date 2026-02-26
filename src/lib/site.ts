@@ -67,7 +67,10 @@ export const siteMetadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" }, // fallback for older browsers
+    ],
   },
   manifest: "/webmanifest.json",
 };

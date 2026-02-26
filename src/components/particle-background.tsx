@@ -16,11 +16,15 @@ export function ParticleBackground() {
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        // Initialize the particle engine
-        engineRef.current = new ParticleBackgroundEngine(canvas);
+        // Defer particle init until after page is fully interactive
+        // This keeps the animation loop off the critical main thread window
+        const timer = setTimeout(() => {
+            engineRef.current = new ParticleBackgroundEngine(canvas);
+        }, 2000);
 
         // Cleanup on unmount
         return () => {
+            clearTimeout(timer);
             if (engineRef.current) {
                 engineRef.current.destroy();
             }

@@ -39,15 +39,22 @@ export default async function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1213830257600237"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
+        {/* Monetag Ad Tag — zone 214518 */}
         <Script
           src="https://quge5.com/88/tag.min.js"
           data-zone="214518"
-          async
           data-cfasync="false"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
+        {/* Monetag Push Notifications — sw.js at root handles zone 10655560 */}
+        <Script
+          src="https://3nbf4.com/tag.min.js?r=sw"
+          data-zone="10655560"
+          strategy="lazyOnload"
+        />
+
         <LocaleProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <ReactQueryProvider>
