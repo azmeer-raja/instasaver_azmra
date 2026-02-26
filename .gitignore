@@ -31,3 +31,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Partytown (generated at build time)
+public/~partytown

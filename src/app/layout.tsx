@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { DM_Sans as RootFont } from "next/font/google";
-
+import { ParticleBackgroundLazy } from "@/components/particle-background-lazy";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/features/theme/theme-provider";
 import { LocaleProvider } from "@/features/i18n/locale-provider";
 import { ReactQueryProvider } from "@/features/react-query/react-query-provider";
-import { ParticleBackground } from "@/components/particle-background";
 
 import { cn } from "@/lib/utils";
 import { siteMetadata } from "@/lib/site";
 import { getLocale, getMessages } from "next-intl/server";
 
 import Script from "next/script";
+import { Partytown } from "@qwik.dev/partytown/react";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
@@ -20,6 +20,8 @@ import "./globals.css";
 const geistSans = RootFont({
   variable: "--font-root-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = siteMetadata;
@@ -34,31 +36,36 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Bootstrap Partytown web worker — moves 3rd-party scripts off the main thread */}
+        <Partytown lib="/~partytown/" forward={["dataLayer.push"]} />
+      </head>
       <body className={cn("antialiased", geistSans.className)}>
+        {/* Google AdSense — runs in Partytown web worker, zero main-thread cost */}
         <Script
-          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1213830257600237"
           crossOrigin="anonymous"
-          strategy="lazyOnload"
+          type="text/partytown"
         />
-        {/* Monetag Ad Tag — zone 214518 */}
+        {/* Monetag Ad Tag — zone 214518, web worker via Partytown */}
         <Script
           src="https://quge5.com/88/tag.min.js"
           data-zone="214518"
           data-cfasync="false"
-          strategy="lazyOnload"
+          type="text/partytown"
         />
-        {/* Monetag Push Notifications — sw.js at root handles zone 10655560 */}
+        {/* Monetag Push Notifications — zone 10655560, web worker via Partytown */}
         <Script
           src="https://3nbf4.com/tag.min.js?r=sw"
           data-zone="10655560"
-          strategy="lazyOnload"
+          type="text/partytown"
         />
 
         <LocaleProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <ReactQueryProvider>
-              <ParticleBackground />
+              <ParticleBackgroundLazy />
+
               <div className="relative z-10">
                 {children}
                 <Toaster closeButton />
