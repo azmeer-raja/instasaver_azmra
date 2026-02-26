@@ -1,1 +1,6 @@
-<meta name="monetag" content="334c54fd89d9a13a2c0e61dab3d176eb">
+self.options = {
+    "domain": "5gvci.com",
+    "zoneId": 10655458
+}
+self.lary = ""
+importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')
