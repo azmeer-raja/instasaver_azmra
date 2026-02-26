@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin("./src/features/i18n/request.ts");
 
 const nextConfig: NextConfig = {
   devIndicators: false,
-  output: "standalone",
 };
 
 export default withNextIntl(nextConfig);
