@@ -22,14 +22,6 @@ export function AdManager() {
 
     return (
         <>
-            {/* Google AdSense - ALWAYS loads (Required for ad units to render on subsequent navigations) */}
-            <Script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1213830257600237"
-                crossOrigin="anonymous"
-                strategy="lazyOnload"
-            />
-
             {shouldLoadAds && (
                 <>
                     {/* Monetag Ad Tag — zone 214518 */}

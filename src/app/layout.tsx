@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/features/theme/theme-provider";
 import { LocaleProvider } from "@/features/i18n/locale-provider";
 import { ReactQueryProvider } from "@/features/react-query/react-query-provider";
-
+import Script from "next/script";
 import { cn } from "@/lib/utils";
 import { siteMetadata } from "@/lib/site";
 import { getLocale, getMessages } from "next-intl/server";
@@ -35,6 +35,16 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* Google AdSense - ALWAYS loads (Required for ad units to render on subsequent navigations) */}
+        <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1213830257600237"
+          crossOrigin="anonymous"
+        />
+        <meta name="google-adsense-account" content="ca-pub-1213830257600237" />
+      </head>
       <body className={cn("antialiased", geistSans.className)}>
         <AdManager />
 
