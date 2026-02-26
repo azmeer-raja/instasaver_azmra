@@ -1,4 +1,5 @@
 # Insta Saver by Azmra (Instagram Video Downloader)
+**Developed by [Azmra](https://github.com/azmeer-raja)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
