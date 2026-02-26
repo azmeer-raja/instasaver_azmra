@@ -1,43 +1,63 @@
 import { Metadata } from "next";
 
 export const siteConfig = {
-  name: "Insta Saver by Azmra",
+  name: "Insta Saver — Free Instagram Video & Reel Downloader",
   domain: "instasaver-azmra.vercel.app",
-  shortName: "Insta Saver by Azmra",
+  shortName: "Insta Saver",
   creator: "azmeer raja m",
   description:
-    "Fast, free, and no login required. Just paste the URL and download.",
+    "Insta Saver is a free Instagram video downloader. Download Instagram Reels, Videos, and Stories in HD quality — no login required. Fast and easy!",
   ogDescription:
-    "Fast, free, and no login required. Just paste the URL and download.",
+    "Download Instagram Reels, Videos & Stories for free in HD. No login, no watermark, no limits. Try Insta Saver now!",
   url: "https://instasaver-azmra.vercel.app/",
+  keywords: [
+    "insta saver",
+    "instagram video downloader",
+    "instagram reel downloader",
+    "download instagram videos",
+    "instagram story downloader",
+    "free instagram downloader",
+    "save instagram reels",
+    "insta downloader",
+    "ig downloader",
+    "reel saver",
+  ],
 };
 
 export const siteMetadata: Metadata = {
-  title: siteConfig.name,
+  title: {
+    default: siteConfig.name,
+    template: `%s | Insta Saver`,
+  },
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
   creator: siteConfig.creator,
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     title: siteConfig.name,
     description: siteConfig.ogDescription,
     url: siteConfig.url,
-    siteName: siteConfig.name,
+    siteName: siteConfig.shortName,
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.ogDescription,
-    creator: siteConfig.creator,
+    creator: "@azmeeraja",
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
-    nocache: true,
+    nocache: false,
     googleBot: {
       index: true,
-      follow: false,
-      noimageindex: true,
+      follow: true,
+      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
