@@ -11,6 +11,8 @@ import { cn } from "@/lib/utils";
 import { siteMetadata } from "@/lib/site";
 import { getLocale, getMessages } from "next-intl/server";
 
+import Script from "next/script";
+
 import "./globals.css";
 
 const geistSans = RootFont({
@@ -31,6 +33,12 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body className={cn("antialiased", geistSans.className)}>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1213830257600237"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <LocaleProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <ReactQueryProvider>
