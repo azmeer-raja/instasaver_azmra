@@ -1,0 +1,23 @@
+{
+  "header": {
+    "themeLabel": "Thema",
+    "localeLabel": "Sprache",
+    "links": {
+      "features": "Funktionen",
+      "howItWorks": "So funktioniert's",
+      "frequentlyAsked": "FAQ"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Anwendung. Alle Rechte vorbehalten.",
+    "disclaimer": "Insta Saver ist nicht mit Instagram verbunden. Bitte respektieren Sie Urheber- und Datenschutzrechte.",
+    "legal": "LEGAL",
+    "links": {
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutzrichtlinie",
+      "dmca": "DMCA",
+      "disclaimer": "Haftungsausschluss",
+      "contact": "Kontakt"
+    }
+  }
+}
